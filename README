@@ -1,0 +1,9 @@
+will generate 3 executables with make:
+calc, isprime and factorize.
+
+isprime.c, factorize.c and primes.h comes directly from gmp source codes.
+only adding them here for easy access as calculators.
+
+gmphelper, mathlib and calc are written by myself.
+no copyright. Any student suffering in the cryptography course can use these codes.
+(installation of gmp is needed.)
