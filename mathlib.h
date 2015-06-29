@@ -22,9 +22,10 @@ public:
 
 void matrixDetCalc();
 
-int modInt(int& a, int& n);
+int modInt(int a, int n);
 
 void gcdInt( int& d, int& s, int& t, int& a, int& b);
 
 void matrixInvCalc();
 
+void crt();

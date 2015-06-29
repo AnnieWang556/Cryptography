@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include "mathlib.h"
+#include <iostream>
+
+using namespace std;
 
 int matrix::determinant()
 {
@@ -116,4 +119,28 @@ void matrixInvCalc()
 	printf("inverse of A modulo n: \n");
 	printf("%d	%d	%d\n%d	%d	%d\n%d	%d	%d\n", A.a, A.b, A.c, A.d, A.e, A.f, A.g, A.h, A.i);
 
+}
+
+void crt()
+{
+	int a,b,c,p,q,t;
+	printf("Input 'a b c p q t', seperated by space:\n");
+	printf("x = a mod p\nx = b mod q\nx = c mod t\n");
+	cin >> a >> b >> c >> p >> q >> t;
+
+	int n=p*q*t;
+	int x[3]={0, 0, 0};
+	int y[3]={0, 0, 0};
+	int temp = q*t;
+	int temp1 = 1;
+	gcdInt(temp1, x[0], y[0], p, temp); // d s t a b
+	temp = p*t;
+	gcdInt(temp1, x[1], y[1], q, temp); // d s t a b
+	temp = p*q;
+	gcdInt(temp1, x[2], y[2], t, temp); // d s t a b
+
+	int result = q*t*y[0]*a + p*t*y[1]*b + p*q*y[2]*c;
+	result = modInt(result, n);
+
+	cout << "result is " << result << '\n';
 }

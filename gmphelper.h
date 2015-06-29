@@ -8,7 +8,7 @@ class mpzNum
 // member functions
 public:
 	mpzNum(){ mpz_init(num); }
-	mpzNum(unsigned long int n){ mpz_init_set_ui(num, n); }
+	mpzNum(signed long int n){ mpz_init_set_si(num, n); }
 	mpzNum(const mpzNum& n){ mpz_init_set(num, n.num); }
 	~mpzNum(){ mpz_clear(num); }
 
@@ -41,7 +41,7 @@ public:
 	void operator*=(unsigned long int other){ mpz_mul_ui(num, num, other); }
 
 	void operator=(const mpzNum& rhs){ mpz_set(num, rhs.num); }
-	void operator=(unsigned long int other){ mpz_set_ui(num, other); }
+	void operator=(signed long int other){ mpz_set_si(num, other); }
 
 // member data
 public:

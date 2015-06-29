@@ -7,3 +7,13 @@ only adding them here for easy access as calculators.
 gmphelper, mathlib and calc are written by myself.
 no copyright. Any student suffering in the cryptography course can use these codes.
 (installation of gmp is needed.)
+
+function list: 
+1: mod
+2: gcd
+3: exponentialMod
+4: matrixDet
+5: matrixInv
+6: legendre
+7: jacobi
+8: crt 				// author: yu.sha
